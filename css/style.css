@@ -1,7 +1,6 @@
 #colorForm {padding-bottom:10px;}
 #rightHome {
     background-color:#fff;
-    border: 2px solid;
     -webkit-border-top-right-radius: 25px;
     -webkit-border-bottom-right-radius: 25px;
     -moz-border-radius-topright: 25px;
@@ -11,7 +10,6 @@
 }
 #leftHome {
     background-color:#fff;
-    border: 2px solid;
     -webkit-border-top-left-radius: 25px;
     -webkit-border-bottom-left-radius: 25px;
     -moz-border-radius-topleft: 25px;
@@ -19,12 +17,27 @@
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
 }
-.row {
-    display: table;
+
+@media (min-width: 992px) {
+    #rightHome {
+        min-height:380px;
+    }
+    #leftHome {
+min-height:380px;
+    }
 }
 
-.row [class*="col-"] {
-    float: none;
-    display: table-cell;
-    vertical-align: top;
+
+@media (max-width: 992px) {
+    #rightHome {
+        -webkit-border-radius:0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+    #leftHome {
+        background-color:#fff;
+        -webkit-border-radius:0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
 }
